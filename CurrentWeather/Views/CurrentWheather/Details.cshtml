@@ -1,0 +1,36 @@
+﻿@model Model.CurrentWheather
+@{
+    ViewBag.Title = (Model.name);
+}
+<h2>Wheater of @Model.name</h2>
+<ol class="breadcrumb">
+    <li class="active">Clima, Ciudad de @(Model.name) </li>
+</ol>
+<div class="panel panel-default">
+    <div class="panel-heading">Información del Clima</div>
+    <div class="panel-body">
+        <dl class="dl-horizontal">
+            <dt>Ciudad</dt>
+            <dd>@Model.name</dd>
+            @foreach (var m in Model.weather)
+            {
+                <dt>Cielo</dt>
+                <dd>@m.main</dd>
+            }
+            <dt>Temperatura F°</dt>
+            <dd>@Model.main.temp</dd>
+            <dt>Presión</dt>
+            <dd>@Model.main.pressure</dd>
+            <dt>Humedad</dt>
+            <dd>@Model.main.humidity</dd>
+            <dt>Temperatura Mínima</dt>
+            <dd>@Model.main.temp_min</dd>
+            <dt>Temperatura Máxima</dt>
+            <dd>@Model.main.temp_max</dd>
+            <dt>Visibilidad</dt>
+            <dd>@Model.visibility</dd>
+            <dt>Velocidad del Viento</dt>
+            <dd>@Model.wind.speed</dd>
+        </dl>
+    </div>
+</div>

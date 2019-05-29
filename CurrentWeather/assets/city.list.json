@@ -1,0 +1,56 @@
+[
+  {
+    "id": 3433955,
+    "name": "Ciudad Autónoma de Buenos Aires",
+    "country": "AR",
+    "coord": {
+      "lon": -58.450001,
+      "lat": -34.599998
+    }
+  },
+  {
+    "id": 3435907,
+    "name": "Provincia de Buenos Aires",
+    "country": "AR",
+    "coord": {
+      "lon": -60,
+      "lat": -36
+    }
+  },
+  {
+    "id": 3433359,
+    "name": "Ituzaingo",
+    "country": "AR",
+    "coord": {
+      "lon": -58.65836,
+      "lat": -34.655819
+    }
+  },
+   {
+    "id": 3433487,
+    "name": "Departamento de Iguazú",
+    "country": "AR",
+    "coord": {
+      "lon": -54.366669,
+      "lat": -25.866671
+    }
+  },
+  {
+    "id": 3436230,
+    "name": "Avellaneda",
+    "country": "AR",
+    "coord": {
+      "lon": -59.65834,
+      "lat": -29.117611
+    }
+  },
+  {
+    "id": 3837124,
+    "name": "San Justo",
+    "country": "AR",
+    "coord": {
+      "lon": -60.591888,
+      "lat": -30.789129
+    }
+  }
+]

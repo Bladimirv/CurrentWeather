@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Inicio";
+}
+<h2 class="page-header">
+</h2>
+<script>
+    $(document).ready(function () {
+
+        //Se recuperan algunas sucursales desde una Base de Datos en FireBase para cargar droplist
+        const url = 'https://angula-html-3fbd7.firebaseio.com/city.json';
+        $.getJSON(url, function (data) {
+            var s = '<option value="-1">Seleccione</option>';
+            $.each(data, function (i, item) {
+                s += '<option value="' + item.id + '">' + item.name + '</option>';
+                console.log(item.name);
+            });
+            $("#CitiesOffices").html(s);
+        });
+    });
+
+    function goCurrentWheather() {
+        var id = $("#CitiesOffices").val();
+        if (id > 0)
+            window.location.href = "/Home/ver/" + id;
+        else
+            return false;
+    };
+</script>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ciudad - Sucursales</th>
+            <th style="width:200px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th width="28%">
+                <select class="form-control" id="CitiesOffices" name="CitiesOffices" required></select>
+            </th>
+            <th>
+                <a class="btn btn-xs btn-default" onclick="goCurrentWheather()">Ver</a>
+            </th>
+        </tr>
+    </tbody>
+</table>
